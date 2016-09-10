@@ -1,6 +1,5 @@
-﻿Write-Host "Begin Deployment"
+Write-Host "Begin Deployment"
 $date = Get-Date
-Write-Host "Build n Push"
 Invoke-Expression -Command:hugo
 Invoke-Expression -Command:'cd public'
 Invoke-Expression -Command:'git add -A'
