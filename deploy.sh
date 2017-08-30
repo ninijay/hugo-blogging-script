@@ -21,4 +21,8 @@ git add -A
 git commit -m "Update, $DATE"
 git push blog master
 echo "git pull over SSH"
-ssh ${username}@${server} 'cd $dir && git pull blog master'
+ssh ${username}@${server} << HERE
+cd $dir
+git pull blog master
+HERE
+
